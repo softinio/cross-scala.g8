@@ -8,7 +8,7 @@
             "type": "scala",
             "name": "$libraryNameCamel$Spec",
             "request": "launch",
-            "testClass": "$package$.$githubUserNoSpaceLowercase$.$libraryNameNoSpaceLowercase$.$libraryNameCamel$Spec",
+            "testClass": "$package$.$libraryNameNoSpaceLowercase$.$libraryNameCamel$Spec",
             "buildTarget": "rootJVM-test"
         }
     ]

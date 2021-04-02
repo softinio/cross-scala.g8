@@ -1,34 +1,31 @@
-val scala213 = "2.13.4"
+val scala213 = "2.13.5"
 val scala212 = "2.12.13"
 val scala211 = "2.11.12"
-val dottyNext = "3.0.0-RC1"
-val dottyStable = "3.0.0-M3"
-val scalaJSVersion = "1.5.0"
+val dottyNext = "3.0.0-RC2"
+val scalaJSVersion = "1.5.1"
 val scalaNativeVersion = "0.4.0"
-val mUnitVersion = "0.7.22"
+val mUnitVersion = "0.7.23"
 
 val scala2Versions = List(scala213, scala212, scala211)
-val scala3Versions = List(dottyNext, dottyStable)
+val scala3Versions = List(dottyNext)
 val allScalaVersions = scala2Versions ++ scala3Versions
 
 inThisBuild(
   List(
     scalaVersion := scala213,
-    organization := "$package$.$githubUserNoSpaceLowercase$",
-    homepage := Some(url("https://github.com/$githubUserNoSpaceLowercase$/$libraryNameHyphen$")),
+    organization := "$package$",
+    homepage := Some(url("$homepage$")),
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     developers := List(
       Developer(
         "$githubUserNoSpaceLowercase$",
         "$githubUser$",
-        "opalaarturgmailcom",
-        url("https://uk.linkedin.com/in/$githubUserNoSpaceLowercase$")
+        "$githubEmail$",
+        url("$githubUserUrl$")
       )
     ),
-    organizationName := "$githubUser$",
-    startYear := Some(2020),
     licenses += ("Apache-2.0", new URL("https://www.apache.org/licenses/LICENSE-2.0.txt")),
-    scalafixDependencies += "$package$.liancheng" %% "organize-imports" % "0.5.0",
+    scalafixDependencies += "com.github.liancheng" %% "organize-imports" % "0.5.0",
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision,
     scalafixScalaBinaryVersion := "2.13"
@@ -108,7 +105,6 @@ lazy val docs = project
       "SCALA_NATIVE_VERSION"     -> scalaNativeVersion,
       "SCALA_JS_VERSION"         -> scalaJSVersion,
       "DOTTY_NEXT_VERSION"       -> dottyNext,
-      "DOTTY_STABLE_VERSION"     -> dottyStable,
       "SUPPORTED_SCALA_VERSIONS" -> allScalaVersions.map(v => s"`\$v`").mkString(", ")
     ),
     skip in publish := true

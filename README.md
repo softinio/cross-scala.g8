@@ -3,7 +3,7 @@ cross-scala.g8
 
 A [Giter8](http://www.foundweekends.org/giter8/) template for creating cross-scala.g8
 
-Creates an `sbt` project cross compiling to Scala versions `2.13.4`, `2.12.13`, `2.11.12`, `3.0.0-RC1`, `3.0.0-M3`, 
+Creates an `sbt` project cross compiling to Scala versions `2.13.5`, `2.12.13`, `2.11.12`, `3.0.0-RC2`, 
 and ScalaJS version `1.5.0`, and ScalaNative version `0.4.0`.
 
 Inside the box:
@@ -21,15 +21,8 @@ How to create a new project based on the template?
 * Decide your project name (the hardest part :))
 * Run the command
 
-    `sbt new arturopala/cross-scala.g8`
+    `sbt new softinio/cross-scala.g8`
 
-or    
-
-* Install g8 commandline tool (http://www.foundweekends.org/giter8/setup.html)
-* Run the command
-
-    `g8 arturopala/cross-scala.g8 --libraryName="Hello World" --githubUser="Artur Opala" --githubEmail="foo@gmail.com" --package="com.github" -o cross-scala`
-    
 and then
     
     cd cross-scala
@@ -45,6 +38,7 @@ and then
 How to test the template and generate an example project?
 ---
 
+* Install g8 commandline tool (http://www.foundweekends.org/giter8/setup.html)
 * Run `./test.sh` 
 
 An example project will be then created and tested in `target/sandbox/cross-scala`
@@ -78,9 +72,9 @@ the template will supply the following values for the placeholders:
 	$libraryNameNoSpaceLowercase$ -> helloworld
 	$libraryNameHyphen$ -> hello-world
 	$libraryName$ -> Hello World
-	$githubUserNoSpaceLowercase$ -> arturopala
-	$githubUserHyphen$ -> artur-opala
-	$githubUser$ -> Artur Opala
+	$githubUserNoSpaceLowercase$ -> firstnamelastname
+	$githubUserHyphen$ -> firstname-lastname
+	$githubUser$ -> Firstname Lastname
 	$githubEmail$ -> foo@gmail.com
 
 and produce the folders and files as shown below:
@@ -110,10 +104,9 @@ and produce the folders and files as shown below:
 	    ├── main
 	    │   └── scala
 	    │       └── com
-	    │           └── github
-	    │               └── arturopala
-	    │                   └── helloworld
-	    │                       └── HelloWorld.scala
+	    │           └── example
+	    │               └── helloworld
+	    │                   └── HelloWorld.scala
 	    │
 	    ├── site
 	    │   └── index.html
@@ -122,7 +115,6 @@ and produce the folders and files as shown below:
 	        └── scala
 	            └── com
 	                └── github
-	                    └── arturopala
-	                        └── helloworld
-	                            ├── AnyWordSpecCompat.scala
-	                            └── HelloWorldSpec.scala
+	                    └── helloworld
+	                        ├── AnyWordSpecCompat.scala
+	                        └── HelloWorldSpec.scala

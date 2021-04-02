@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package $package$.$githubUserNoSpaceLowercase$.$libraryNameNoSpaceLowercase$
+package $package$.$libraryNameNoSpaceLowercase$
 
 class $libraryNameCamel$Spec extends AnyWordSpecCompat {
 
